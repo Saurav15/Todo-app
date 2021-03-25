@@ -51,9 +51,9 @@ body{
     cursor: pointer;
     border-left: 1px solid black;
 }
-.fa-plus-square:hover{
+/* .fa-plus-square:hover{
     font-size: 1.4rem;
-}
+} */
 
 
 /* Styling Dynamically created elements */
@@ -98,10 +98,10 @@ body{
     cursor: pointer;
 }
 
-.complete-btn:hover,.trash-btn:hover{
+/* .complete-btn:hover,.trash-btn:hover{
     background: black;
     color: whitesmoke;
-}
+} */
 
 .dark_bg{
     background: rgb(190, 186, 186);
@@ -135,6 +135,17 @@ body{
     }
   }
 
+
+  @media (hover: hover){
+    .fa-plus-square:hover{
+        font-size: 1.4rem;
+    }
+    .complete-btn:hover,.trash-btn:hover{
+        background: black;
+        color: whitesmoke;
+    }
+
+  }
 
 @media (max-width: 550px){
     html:not(){
@@ -173,4 +184,6 @@ body{
     .todo-items{
         width: 100%;
     }
+
+
 }

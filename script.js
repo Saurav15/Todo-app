@@ -75,3 +75,6 @@ input_value.addEventListener('keyup',(e)=>{
         create_div();
     }
 })
+
+var hover_remove = document.getElementsByClassName('fa-plus-square')[0];
+console.log(hover_remove.classList.remove('hover'))
