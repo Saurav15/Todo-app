@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: #ffa69e;
+    background-image: linear-gradient(315deg, #ffa69e 0%, #5d4954 74%);
+}
+
+.main{
+    min-height: 100vh;
+    text-align: center;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    padding: 1rem 1rem;
+}
+
+.title-text{
+    padding-top: 4rem;
+    font-size: 1.8rem;
+}
+
+.todo-input {
+    padding-top: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+#input-text{
+    width: 32%;
+    height: 2.5rem;
+    border: none;
+    /* border-radius: 0.2rem; */
+    padding-left: 0.5rem;
+    font-size: 1.13rem;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    font-weight: 400;
+}
+
+.fa-plus-square{
+    font-size: 1.3rem;
+    color: black;
+    padding: 0.6rem;
+    background:white;
+    cursor: pointer;
+    border-left: 1px solid black;
+}
+.fa-plus-square:hover{
+    font-size: 1.4rem;
+}
+
+
+/* Styling Dynamically created elements */
+/* list-items = li tag
+    todo-items = div 
+    complete-btn
+    trash-btn*/
+
+.todo-container{
+    margin-top: 3rem ;
+}
+
+.list-items{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    background: white;
+    color: black;
+    margin: auto;
+    margin-top: 1rem;
+    border: none;
+    border-radius: 0.2rem;
+}
+
+.todo-items{
+    flex: 1;
+    text-align: left;   
+    font-family: 'Poppins', sans-serif;
+    padding-left: 0.5rem;
+    overflow: auto;
+}
+
+.complete-btn,.trash-btn{
+    height: 100%;
+    background: rgb(238, 235, 235);
+    padding: 0.5rem;
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.complete-btn:hover,.trash-btn:hover{
+    background: black;
+    color: whitesmoke;
+}
+
+.dark_bg{
+    background: rgb(190, 186, 186);
+}
+
+.delete_transition{
+    transition: all 0.2s ease-out;
+    animation-name: myAnimation;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+}
+
+.tooltip{
+    position: relative;
+    display: none;
+    top: 2rem;
+    background: black;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+
+@keyframes myAnimation{
+    0%{
+      opacity: 1;
+      transform: rotatez(0deg) translateY(0px);
+    }
+    100%{
+      opacity: 0;
+      transform: rotatez(20deg) translateY(30vh);
+    }
+  }
+
+
+@media (max-width: 550px){
+    html:not(){
+        font-size: 10px;
+    }
+
+    .title-text{
+        font-size: 1.4rem;
+    }
+
+    .todo-input{
+        padding-top: 2.3rem;
+        /* padding: 2rem; */
+    }
+
+    .tooltip{
+        top: 0.9rem;
+    }
+
+    #input-text{
+        width: 87%;
+        height: 3rem;
+        margin: auto;
+    }
+
+    .fa-plus-square{
+        font-size: 1.7rem;
+        padding: 0.6rem;
+        right: 2.4rem;
+    }
+
+    .list-items{
+        width: 90%;
+    }
+
+    .todo-items{
+        width: 100%;
+    }
+}
