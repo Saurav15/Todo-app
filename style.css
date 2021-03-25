@@ -185,5 +185,14 @@ body{
         width: 100%;
     }
 
-
+    @media (hover: none){
+        .fa-plus-square:hover{
+            font-size: 1.4rem;
+        }
+        .complete-btn:hover,.trash-btn:hover{
+            background: black;
+            color: whitesmoke;
+        }
+    
+      }
 }
