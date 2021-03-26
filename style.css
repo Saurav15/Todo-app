@@ -23,6 +23,8 @@ body{
     font-size: 1.8rem;
 }
 
+
+/* input-bar and filter */
 .todo-input {
     padding-top: 4rem;
     display: flex;
@@ -31,10 +33,14 @@ body{
     margin: auto;
 }
 
+.first_section{
+    width: 42%;
+}
+
 #input-text{
-    width: 32%;
-    height: 2.5rem;
+    width: 80%;
     border: none;
+    height: 2.5rem;
     /* border-radius: 0.2rem; */
     padding-left: 0.5rem;
     font-size: 1.13rem;
@@ -51,6 +57,22 @@ body{
     cursor: pointer;
     border-left: 1px solid black;
 }
+
+
+/* Filter */
+
+.filter{
+    padding-left: 0.5rem;
+}
+
+#select{
+    font-size: 1rem;
+    height: 2.5rem;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+}
+
 /* .fa-plus-square:hover{
     font-size: 1.4rem;
 } */
@@ -124,6 +146,14 @@ body{
 }
 
 
+.hide_items{
+    display: none;
+}
+.show_items{
+    display: flex;
+}
+
+
 @keyframes myAnimation{
     0%{
       opacity: 1;
@@ -138,7 +168,8 @@ body{
 
   @media (hover: hover){
     .fa-plus-square:hover{
-        font-size: 1.4rem;
+        background-color: black;
+        color: white;
     }
     .complete-btn:hover,.trash-btn:hover{
         background: black;
@@ -155,10 +186,20 @@ body{
     .title-text{
         font-size: 1.4rem;
     }
-
+    
     .todo-input{
         padding-top: 2.3rem;
         /* padding: 2rem; */
+        display: flex;
+        flex-direction: column;
+    }
+
+    .first_section{
+        width: 95%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 1rem;
     }
 
     .tooltip{
@@ -166,15 +207,16 @@ body{
     }
 
     #input-text{
-        width: 87%;
+        /* width: 87%; */
         height: 3rem;
         margin: auto;
+        flex: 1;
     }
 
     .fa-plus-square{
         font-size: 1.7rem;
-        padding: 0.6rem;
-        right: 2.4rem;
+        padding: 0.65rem;
+        /* border: none; */
     }
 
     .list-items{
@@ -186,3 +228,5 @@ body{
     }
 
 }
+
+

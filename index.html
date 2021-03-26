@@ -16,9 +16,21 @@
         </div>
         
         <span class="tooltip">Enter your task first you fool</span>
+        
         <div class="todo-input">
-            <input type="text" id="input-text" placeholder="Enter your task">
-            <i class="fas fa-plus-square"></i>
+            <div class="first_section">
+                <input type="text" id="input-text" placeholder="Enter your task">
+                <i class="fas fa-plus-square"></i>
+            </div>
+
+            <!-- Adding filter -->
+            <div class="filter">
+                <select id="select" name="Filter">
+                    <option value="All">All</option>
+                    <option value="completed">Completed</option>
+                    <option value="not completed">Not Completed</option>
+                </select>
+            </div>
         </div>
         
         <div class="todo-container">
